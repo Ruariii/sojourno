@@ -1,0 +1,379 @@
+* { 
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  box-sizing: border-box;
+}
+
+.login-background, .main-background {
+  background-color: rgb(189, 235, 233);
+  display: flex;
+  justify-content: center;
+  padding: 6rem 2rem;
+  min-height: 100vh;
+}
+
+.login-split-left,
+.login-split-right {
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  border: 1px solid darkslategrey;
+}
+
+.login-split-left {
+  display: flex;
+  width: 60%;
+  padding: 0;
+  left: 0;
+}
+
+.login-split-right {
+  width: 40%;
+  right: 0;
+  background-color: #f0f0f0;
+  opacity: 0.9;
+}
+
+
+.login-image-container {
+  display: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.login-image {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.login-title {
+  position: absolute;
+  color: aliceblue;
+  font-weight: bolder;
+  opacity: 0.75;
+  text-shadow: 2px 2px darkslategrey;
+  padding: 1rem 2rem;
+}
+
+.login-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 3rem;
+}
+
+.login-subtitle {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  font-weight: bolder;
+  color: darkslategrey;
+}
+
+.login-form-text {
+  text-align: left;
+  font-size: 0.75rem;
+  color: darkslategrey;
+  margin-top: auto;
+  text-wrap: nowrap;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  width: 80%;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25vw;
+  width: 40%;
+  height: 3rem;
+  text-align: center;
+  font-size: 1.1vw;
+  color: aliceblue;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 1rem;
+}
+
+.primary-button {
+  background: slateblue;
+}
+
+.secondary-button {
+  background: slategray;
+}
+
+.nav-button {
+  height: 1.5rem;
+  background: slategray;
+}
+
+.primary-button:hover {
+  background: darkslateblue;
+}
+
+.secondary-button:hover {
+  background: darkslategray;
+}
+
+.nav-button:hover {
+  background: darkslategray;
+}
+
+input {
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.login-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%
+}
+
+.google-icon {
+  width: 2vw;
+}
+
+.login-navbar {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-left: auto;
+  gap: 1rem;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: darkslategray;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  z-index: 1000;
+}
+
+.nav-link-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-top: auto
+}
+
+.nav-link {
+  font-size: 1.2rem;;
+  color: aliceblue;
+  user-select: none;
+}
+
+.nav-link:hover {
+  cursor: pointer;
+}
+
+/* Style for the post list */
+.post-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 1rem;
+  width: 50vw;
+}
+
+/* Style for each post container */
+.post-container {
+  border: 0.25rem solid aliceblue;
+  padding: 2rem;
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  background-color: slategray;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Style for the post title */
+.post-title {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+/* Style for the post image container */
+.post-img-container {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem;
+  width: 90%;
+  max-height: 80vh;
+  border: 1px solid darkslateblue;
+}
+
+.post-image-preview-container {
+  max-width: 10rem;
+}
+
+.post-image-preview {
+  object-fit: cover;
+  width: 100%;
+  border: 1px solid darkslateblue;
+}
+
+/* Style for the post image */
+.post-img {
+  width: 100%;
+  object-fit: cover;
+  height: auto; /* Maintain the aspect ratio of the image */
+  display: block; /* Ensure the image is displayed as a block element */
+  margin: 0 auto;
+  border-radius: 0.5rem;
+}
+
+/* Style for the post body */
+.post-body {
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+.sidebar-container {
+  position: sticky;
+  top: 7.5rem;
+  left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 35vw;
+  height: 100vh;
+  overflow-y: auto;
+  margin-right: 6rem;
+}
+
+.add-new-post-icon {
+  font-size: 5rem;
+  color: slateblue;
+}
+
+.add-new-img-icon {
+  font-size: 2.5rem;
+  color: slateblue;
+}
+
+.add-new-post-icon:hover {
+  color: darkslateblue;
+}
+
+.add-new-img-icon:hover {
+  color: darkslateblue;
+}
+
+.upload-form-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 1rem;
+  background: aliceblue;
+  margin-top: 3rem;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.form-controls {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.image-upload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-nav {
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+}
+
+.post-nav-icon-container {
+  display: flex;
+  margin-left: auto;
+  gap: 1rem;
+}
+
+.post-icon {
+  width: 1rem;
+}
+
+.post-icon:hover {
+  color: aliceblue;
+}
+
+.user-details, .sidebar-controls {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 2rem
+}
+
+.sidebar-controls {
+  justify-content: center;
+  gap: 5rem;
+}
+
+.profile-image-container, .profile-image-preview-container {
+  overflow: hidden;
+  border-radius: 3.5rem;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem;
+  border: 1px solid darkslateblue;
+}
+
+.profile-image-container {
+  width: 7rem;
+  height: 7rem;
+}
+
+.profile-image-preview-container {
+  width: 7rem;
+  height: 5rem;
+}
+
+.post-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 6rem;
+  margin-bottom: 1rem;
+}
+
+.profile-image {
+  width: 100%;
+  object-fit: cover;
+}
+
