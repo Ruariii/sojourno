@@ -14,7 +14,7 @@ export default function Navbar() {
 
     return (
         <div className="nav">
-            <h1 className='login-title'>Sojourno</h1>
+            <h1 className='nav-title'>Sojourno</h1>
             <div  className="nav-link-container">
                 <div className="nav-link" onClick={signOutButtonPressed}> Sign out </div>
             </div>

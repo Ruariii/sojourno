@@ -75,7 +75,7 @@ export default function PostList() {
     const postElements = posts.map(post => <Post key={post.id} id={post.id} userId={post.userId} displayName={post.displayName} title={post.title} body={post.body} imageSrc={post.imageSrc} uploadRef={post.uploadRef}/>);
     
     return (
-        <div className="post-list">
+        <div className="post-list-container">
             <div className="post-list-header">
                 <FontAwesomeIcon 
                     icon={faUser} 
@@ -92,7 +92,9 @@ export default function PostList() {
                 >
                 </FontAwesomeIcon>
             </div>
-            {postElements}
+            <div className="post-list">
+                {postElements}
+            </div>
         </div>
     )
 }
