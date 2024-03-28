@@ -9,6 +9,8 @@ body {
   box-sizing: border-box;
 }
 
+/*---  MOBILE VIEW  ---*/
+
 @media only screen and (max-width: 768px) {
   .login-background, .main-background {
     background-color: rgb(189, 235, 233);
@@ -99,7 +101,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    width: 80%;
+    width: 100%;
   }
   
   button {
@@ -111,6 +113,7 @@ body {
     height: 3rem;
     text-align: center;
     text-wrap: nowrap;
+    font-size: 0.75rem;
     color: aliceblue;
     margin-top: 1rem;
     border: none;
@@ -368,23 +371,15 @@ body {
   
   .profile-image-container, .profile-image-preview-container {
     overflow: hidden;
-    border-radius: 3.5rem;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
     display: flex;
     align-self: center;
     justify-content: center;
     align-items: center;
     margin: 1.5rem;
     border: 1px solid darkslateblue;
-  }
-  
-  .profile-image-container {
-    width: 7rem;
-    height: 7rem;
-  }
-  
-  .profile-image-preview-container {
-    width: 7rem;
-    height: 5rem;
   }
   
   .post-list-header {
@@ -405,6 +400,28 @@ body {
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---  DESKTOP VIEW  ---*/
 
 @media only screen and (min-width: 768px) {
   .login-background, .main-background {
@@ -760,23 +777,15 @@ body {
   
   .profile-image-container, .profile-image-preview-container {
     overflow: hidden;
-    border-radius: 3.5rem;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
     display: flex;
     align-self: center;
     justify-content: center;
     align-items: center;
     margin: 1.5rem;
     border: 1px solid darkslateblue;
-  }
-  
-  .profile-image-container {
-    width: 7rem;
-    height: 7rem;
-  }
-  
-  .profile-image-preview-container {
-    width: 7rem;
-    height: 5rem;
   }
   
   .post-list-header {
